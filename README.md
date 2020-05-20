@@ -12,6 +12,7 @@ Como características del programa contiene:
   - velocidad
   - color (r,g,b)
   - distancia (calcular la distancia euclidiana)
+---------------------------------------------------------------------------------------------------------------------------
 
 - Capacidad para recuperar las particulas guardadas en un .json así como su respectivo respaldo.
 - Un QPlainTextEdit para mostrar las partículas (todos sus atributos incluyendo la distancia).
