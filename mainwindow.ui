@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>718</width>
+    <height>848</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Grafo  (Algoritmo Dijkstra) - Act 13</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <widget class="QWidget" name="tabAgregar">
+       <attribute name="title">
+        <string>Agregar</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Distancia Euclidiana</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QSpinBox" name="spBxR">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QPushButton" name="btnMostrar">
+          <property name="text">
+           <string>Mostrar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="3">
+         <widget class="QLineEdit" name="lnEdtDestX"/>
+        </item>
+        <item row="7" column="1" colspan="3">
+         <widget class="QLineEdit" name="lnEdtDistEucl"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Id</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="3">
+         <widget class="QLineEdit" name="lnEdtOrigX"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Velocidad</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Origen (X,Y)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Destino (X,Y)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="3">
+         <widget class="QLineEdit" name="lnEdtVel"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QPushButton" name="btnEnviar">
+          <property name="text">
+           <string>Enviar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0" rowspan="2" colspan="5">
+         <widget class="QPlainTextEdit" name="plnTxtWdgtSalida"/>
+        </item>
+        <item row="6" column="2" colspan="2">
+         <widget class="QSpinBox" name="spBxG">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="4">
+         <widget class="QSpinBox" name="spBxB">
+          <property name="maximum">
+           <number>255</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Color (R,G,B)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3">
+         <widget class="QLineEdit" name="lnEdtID"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLineEdit" name="lnEdtOrigY"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLineEdit" name="lnEdtDestY"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTabla">
+       <attribute name="title">
+        <string>Tabla</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLineEdit" name="lnEdtBuscar"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBuscar">
+            <property name="text">
+             <string>Buscar</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="tblWdgtTabla"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btnMostrarTabla">
+          <property name="text">
+           <string>Mostrar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabGrafica">
+       <attribute name="title">
+        <string>Grafica</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="2">
+         <widget class="QGraphicsView" name="graphicsView"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btnDibujar">
+          <property name="text">
+           <string>Dibujar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="btnLimpiar">
+          <property name="text">
+           <string>Limpiar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabOrdenamiento">
+       <attribute name="title">
+        <string>Ordenamiento</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="btnVelocidad">
+            <property name="text">
+             <string>Velocidad</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDistancia">
+            <property name="text">
+             <string>Distancia</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnMostrarOrd">
+            <property name="text">
+             <string>Mostrar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLimpiar_2">
+            <property name="text">
+             <string>Limpiar</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QGraphicsView" name="graphicViewOrdenar"/>
+        </item>
+        <item row="2" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>208</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabPuntosCercanos">
+       <attribute name="title">
+        <string>Puntos Cercanos</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btnLimpiarPC">
+          <property name="text">
+           <string>Limpiar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="btnMostrarPuntosCercanos">
+          <property name="text">
+           <string>Mostrar Puntos Cercanos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="btnMostrarPuntos">
+          <property name="text">
+           <string>Mostrar Puntos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QGraphicsView" name="graphicsViewPuntosCercanos"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabGrafos">
+       <attribute name="title">
+        <string>Grafos</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPlainTextEdit" name="plnTxtEdtGrafo"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnMostrarGrafo">
+          <property name="text">
+           <string>Mostrar Grafo</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnDijkstra">
+          <property name="text">
+           <string>Dijkstra</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnKruskal">
+          <property name="text">
+           <string>Kruskal</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPrim">
+          <property name="text">
+           <string>Prim</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRecorridoAnchura">
+          <property name="text">
+           <string>Recorrido Anchura</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnRecorridoProfundidad">
+          <property name="text">
+           <string>Recorrido Profundidad</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnLimpiar_3">
+          <property name="text">
+           <string>Limpiar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>718</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionGuardar"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>&amp;Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionVer">
+   <property name="text">
+    <string>&amp;Ver</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
